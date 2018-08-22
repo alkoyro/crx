@@ -1,0 +1,21 @@
+# Eclipse Settings
+/.settings/
+/.project
+.springBeans
+.classpath
+target
+
+# intellij settings
+/.idea
+*.iml
+/.vscode/
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+
+#log files
+*.log
