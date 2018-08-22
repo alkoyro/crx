@@ -35,7 +35,7 @@ curl -XGET --header "Content-Type: application/json" --data '{"surfacePoints":["
 
 ## Logs <a name="markdown-logs"></a>
 
-log file **crx.logs** is located at the same location as **rest-1.0.0-SNAPSHOT.jar**
+log file **crx.log** is located at the same location as **rest-1.0.0-SNAPSHOT.jar**
 
 ## Debug <a name="markdown-debug"></a>
 To be able to debug app use
