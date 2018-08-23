@@ -32,7 +32,7 @@ public class HillConverterTest {
     public void testConvertHillRequestToHill() {
         //given
         HillRequest hillRequest = new HillRequest();
-        hillRequest.setSurfacePoints(Arrays.asList("1", "2", "4", "7"));
+        hillRequest.setSurfacePoints(Arrays.asList(1, 2, 4, 7));
 
         //when
         Hill hill = hillConverter.convert(hillRequest);

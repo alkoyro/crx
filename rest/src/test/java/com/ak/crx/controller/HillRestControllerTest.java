@@ -53,7 +53,7 @@ public class HillRestControllerTest {
     public void calculateVolumeSuccess() throws Exception {
         //given
         HillRequest hillRequest = new HillRequest();
-        hillRequest.setSurfacePoints(Arrays.asList("10", "0", "10"));
+        hillRequest.setSurfacePoints(Arrays.asList(10, 0, 10));
         String contentBody = new ObjectMapper().writeValueAsString(hillRequest);
 
         //when

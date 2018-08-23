@@ -1,8 +1,7 @@
 package com.ak.crx.model;
 
-import com.ak.crx.model.validator.constraint.ListPositiveIntegerConstraint;
-
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PositiveOrZero;
 import java.util.List;
 
 /**
@@ -10,15 +9,15 @@ import java.util.List;
  */
 public class HillRequest {
 
+    @FieldView(value = "surfacePoints field expected to be array of numbers", example = "\"surfacePoints\":[10]")
     @NotNull(message = "surfacePoints field should not be empty")
-    @ListPositiveIntegerConstraint(message = "surfacePoints expected to be positive numbers")
-    private List<String> surfacePoints;
+    private List<@PositiveOrZero(message = "surfacePoints filed expect to have a positive numbers") Integer> surfacePoints;
 
-    public List<String> getSurfacePoints() {
+    public List<Integer> getSurfacePoints() {
         return surfacePoints;
     }
 
-    public void setSurfacePoints(List<String> surfacePoints) {
+    public void setSurfacePoints(List<Integer> surfacePoints) {
         this.surfacePoints = surfacePoints;
     }
 }

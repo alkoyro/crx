@@ -7,9 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * converts {@link com.ak.crx.model.HillRequest} to {@link com.ak.crx.domain.Hill}
  */
@@ -21,11 +18,7 @@ public class HillConverter {
     public Hill convert(@NonNull HillRequest hillRequest) {
         Hill hill = new Hill();
 
-        List<Integer> surfPoints = hillRequest.getSurfacePoints().stream()
-                .map(Integer::valueOf)
-                .collect(Collectors.toList());
-
-        hill.setSurfacePoints(surfPoints);
+        hill.setSurfacePoints(hillRequest.getSurfacePoints());
 
         return hill;
     }
